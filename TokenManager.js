@@ -31,11 +31,11 @@ var TokenManager = TokenManager || (function() {
     var percent = Math.round((curHp / maxHp) * 100);
     if (curHp <= 0) {
       dead = true;
-    } else if(percent <= 25) {
+    } else if(percent <= 10) {
       q1 = true;
     } else if (percent <= 50) {
       q2 = true;
-    } else if (percent <= 75) {
+    } else if (percent < 100) {
       q3 = true;
     } else {
       q4 = true;
